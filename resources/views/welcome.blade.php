@@ -202,7 +202,7 @@
         class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#0E0E11]/70 backdrop-blur-lg animate-fade-in-up stagger-1">
         <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between relative">
             <a href="#"
-                class="text-bright font-semibold tracking-tight text-lg hover:text-white transition-colors">Dafa'.</a>
+                class="text-bright font-semibold tracking-tight text-lg hover:text-white transition-colors">Dafa'</a>
 
             <div class="flex items-center gap-6">
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium text-dim">
