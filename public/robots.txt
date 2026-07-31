@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dafa-q.my.id/sitemap.xml
