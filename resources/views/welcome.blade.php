@@ -280,7 +280,7 @@
                 </h1>
 
                 <p class="text-base sm:text-lg text-dim leading-relaxed max-w-lg">
-                    {{ __('Lulusan Politeknik Negeri Malang dengan fokus pada pengembangan aplikasi. Memiliki pemahaman praktis dalam mengonfigurasi server dasar untuk kebutuhan perilisan aplikasi. Berkomitmen bekerja penuh tanggung jawab dan antusias mempelajari teknologi terkini seperti AI guna mendukung hasil optimal.') }}
+                    {{ __('Lulusan Politeknik Negeri Malang dengan fokus pada pengembangan aplikasi. Memiliki pemahaman praktis dalam mengonfigurasi server untuk kebutuhan perilisan aplikasi. Berkomitmen bekerja penuh tanggung jawab dan antusias mempelajari teknologi terkini seperti AI guna mendukung hasil optimal.') }}
                 </p>
 
                 <div class="flex flex-wrap gap-4 pt-2">
