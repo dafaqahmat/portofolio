@@ -318,12 +318,12 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-bright tracking-tight">{{ __('Keterampilan Inti') }}</h2>
             </div>
             <div class="flex flex-wrap gap-3">
-                <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Web Development (PHP, Laravel, Express, Vue)</span>
-                <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Mobile Development (Kotlin, Flutter)</span>
+                <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Web Development</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Pengelolaan Server (Linux Debian CLI, aaPanel)</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Konfigurasi DNS (Cloudflare)</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Database Management</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Version Control (Git)</span>
+                <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Mobile Development</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Search Engine Optimization (SEO)</span>
                 <span class="px-4 py-2 border border-white/10 bg-white/5 rounded-xl text-sm text-bright font-medium cursor-default">Pemanfaatan Tools AI (Efisiensi Kode)</span>
             </div>
