@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+Disallow: /admin/
+Disallow: /login
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /confirm-password
+Disallow: /email/
+Disallow: /user/
+
 Sitemap: https://dafa-q.my.id/sitemap.xml
