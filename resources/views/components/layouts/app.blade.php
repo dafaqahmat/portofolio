@@ -365,11 +365,24 @@
 
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('active');
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
                 });
-            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+            }, { 
+                threshold: 0.01,
+                rootMargin: "0px 0px -20px 0px"
+            });
 
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('active');
+                } else {
+                    revealObserver.observe(el);
+                }
+            });
 
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
