@@ -42,24 +42,25 @@
                 <div class="relative z-20 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                     <div
                         class="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                        <img src="{{ asset('logo/polres-kediri.png') }}" alt="Polres Kediri Logo"
+                        <img src="{{ asset('logo/spunindo.png') }}" alt="PT Multi Spunindo Jaya Tbk Logo"
                             class="w-full h-full object-contain p-2">
                     </div>
                     <div class="space-y-3 w-full">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                            <h3 class="text-xl md:text-2xl font-semibold text-bright">Polres Kediri</h3>
+                            <h3 class="text-xl md:text-2xl font-semibold text-bright">PT Multi Spunindo Jaya Tbk
+                            </h3>
                             <span
-                                class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20 w-fit md:flex-shrink-0">Jun
-                                2024 - Ags 2024</span>
+                                class="text-xs font-mono text-orange-400 bg-orange-400/10 px-3 py-1 rounded-full border border-orange-400/20 w-fit md:flex-shrink-0">Des
+                                2025 - Jun 2026</span>
                         </div>
-                        <p class="text-sm text-dim font-medium uppercase tracking-wider">
-                            {{ __('Praktik Kerja Lapangan (PKL)') }}</p>
+                        <p class="text-sm text-dim font-medium uppercase tracking-wider">{{ __('Magang Nasional') }}
+                        </p>
                         <p class="text-dim text-sm leading-relaxed">
-                            {{ __('Dalam kegiatan PKL di Polres Kediri, saya berkontribusi dalam pengembangan aplikasi Text-to-Speech yang digunakan sebagai sistem pengumuman internal. Selain itu, saya bertugas melakukan pemeliharaan jaringan fisik dasar, seperti crimping kabel LAN dan memastikan konektivitas jaringan pada berbagai perangkat, termasuk menghubungkan CCTV ke dalam jaringan lokal, serta mendata berbagai kebutuhan operasional di Polres Kediri menggunakan Microsoft Office.') }}
+                            {{ __('Bertanggung jawab membangun ulang (rebuild) website profil perusahaan dari platform WordPress menjadi aplikasi berbasis Laravel multilingual dengan dukungan tiga bahasa (Indonesia, Inggris, dan Jepang). Pekerjaan ini mencakup penerapan praktik SEO dasar pada tingkat kode dan penyusunan panduan teknis bagi tim pengelola mengenai cara mengintegrasikan Google Analytics serta mendaftarkan domain melalui Google Search Console. Selain itu, saya berkontribusi dalam menambahkan fitur pada aplikasi katering internal perusahaan sesuai arahan mentor, serta bertugas melakukan proses upload dan pembaruan (update) master data pada sistem SAP perusahaan yang meliputi data material, BOM, dan vendor.') }}
                         </p>
                         <div class="photo-strip">
-                            @foreach($polresImages as $img)
-                                <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}" data-images='@json($polresImages)'
+                            @foreach($msjImages as $img)
+                                <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}" data-images='@json($msjImages)'
                                     data-index="{{ $loop->index }}" loading="lazy" class="cursor-pointer photo-thumb">
                             @endforeach
                         </div>
@@ -102,25 +103,24 @@
                 <div class="relative z-20 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                     <div
                         class="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                        <img src="{{ asset('logo/spunindo.png') }}" alt="PT Multi Spunindo Jaya Tbk Logo"
+                        <img src="{{ asset('logo/polres-kediri.png') }}" alt="Polres Kediri Logo"
                             class="w-full h-full object-contain p-2">
                     </div>
                     <div class="space-y-3 w-full">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                            <h3 class="text-xl md:text-2xl font-semibold text-bright">PT Multi Spunindo Jaya Tbk
-                            </h3>
+                            <h3 class="text-xl md:text-2xl font-semibold text-bright">Polres Kediri</h3>
                             <span
-                                class="text-xs font-mono text-orange-400 bg-orange-400/10 px-3 py-1 rounded-full border border-orange-400/20 w-fit md:flex-shrink-0">Des
-                                2025 - Jun 2026</span>
+                                class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20 w-fit md:flex-shrink-0">Jun
+                                2024 - Ags 2024</span>
                         </div>
-                        <p class="text-sm text-dim font-medium uppercase tracking-wider">{{ __('Magang Nasional') }}
-                        </p>
+                        <p class="text-sm text-dim font-medium uppercase tracking-wider">
+                            {{ __('Praktik Kerja Lapangan (PKL)') }}</p>
                         <p class="text-dim text-sm leading-relaxed">
-                            {{ __('Bertanggung jawab membangun ulang (rebuild) website profil perusahaan dari platform WordPress menjadi aplikasi berbasis Laravel multilingual dengan dukungan tiga bahasa (Indonesia, Inggris, dan Jepang). Pekerjaan ini mencakup penerapan praktik SEO dasar pada tingkat kode dan penyusunan panduan teknis bagi tim pengelola mengenai cara mengintegrasikan Google Analytics serta mendaftarkan domain melalui Google Search Console. Selain itu, saya berkontribusi dalam menambahkan fitur pada aplikasi katering internal perusahaan sesuai arahan mentor, serta bertugas melakukan proses upload dan pembaruan (update) master data pada sistem SAP perusahaan yang meliputi data material, BOM, dan vendor.') }}
+                            {{ __('Dalam kegiatan PKL di Polres Kediri, saya berkontribusi dalam pengembangan aplikasi Text-to-Speech yang digunakan sebagai sistem pengumuman internal. Selain itu, saya bertugas melakukan pemeliharaan jaringan fisik dasar, seperti crimping kabel LAN dan memastikan konektivitas jaringan pada berbagai perangkat, termasuk menghubungkan CCTV ke dalam jaringan lokal, serta mendata berbagai kebutuhan operasional di Polres Kediri menggunakan Microsoft Office.') }}
                         </p>
                         <div class="photo-strip">
-                            @foreach($msjImages as $img)
-                                <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}" data-images='@json($msjImages)'
+                            @foreach($polresImages as $img)
+                                <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}" data-images='@json($polresImages)'
                                     data-index="{{ $loop->index }}" loading="lazy" class="cursor-pointer photo-thumb">
                             @endforeach
                         </div>
