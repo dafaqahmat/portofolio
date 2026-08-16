@@ -7,80 +7,38 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <style>
-        body {
-            background-color: #0E0E11;
-            color: rgba(255, 255, 255, 0.9);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .text-bright {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .text-dim {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .bento-card {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            position: relative;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .bento-card:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0E0E11; }
-        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
-    </style>
 </head>
-<body class="font-sans antialiased selection:bg-white/20 selection:text-white">
-    <div class="min-h-screen bg-[#0E0E11]">
-        <nav x-data="{ open: false }" class="bg-[#0E0E11]/80 backdrop-blur-lg border-b border-white/5">
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="shrink-0 flex items-center">
-                            <a href="{{ route('dashboard') }}" class="font-bold text-xl text-bright tracking-tight">
+                            <a href="{{ route('dashboard') }}" class="font-bold text-xl text-gray-800">
                                 Portfolio Admin
                             </a>
                         </div>
 
-                        <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex items-center">
-                            <a href="{{ route('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-white/40 text-sm font-medium leading-5 text-bright focus:outline-none focus:border-white/70 transition">
+                        <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <a href="{{ route('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition">
                                 Dashboard
                             </a>
-                            <a href="{{ route('admin.projects.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-dim hover:text-white hover:border-white/20 focus:outline-none focus:text-white focus:border-white/30 transition">
+                            <a href="{{ route('admin.projects.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition">
                                 Projects
                             </a>
                         </div>
                     </div>
 
-                    <div class="hidden sm:flex sm:items-center sm:ms-6 gap-4">
-                        <a href="{{ url('/') }}" target="_blank"
-                            class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium text-dim hover:text-white border border-white/10 hover:border-white/20 transition">
-                            {{ __('Lihat Portfolio') }} &nearr;
-                        </a>
-
+                    <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <div class="ms-3 relative">
                             <x-dropdown align="right" width="48">
                                 <x-slot name="trigger">
-                                    <button class="inline-flex items-center px-3 py-2 border border-white/10 rounded-lg text-sm leading-4 font-medium text-bright bg-white/5 hover:bg-white/10 focus:outline-none transition ease-in-out duration-150">
+                                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                         <div>{{ Auth::user()->name }}</div>
                                         <div class="ms-1">
                                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -109,7 +67,7 @@
                     </div>
 
                     <div class="-me-2 flex items-center sm:hidden">
-                        <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-dim hover:text-white hover:bg-white/5 focus:outline-none focus:bg-white/10 focus:text-white transition duration-150 ease-in-out">
+                        <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                 <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -119,24 +77,20 @@
                 </div>
             </div>
 
-            <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t border-white/5">
-                <div class="pt-2 pb-3 space-y-1 px-4">
+            <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+                <div class="pt-2 pb-3 space-y-1">
                     <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('admin.projects.index')" :active="request()->routeIs('admin.projects.*')">
                         {{ __('Projects') }}
                     </x-responsive-nav-link>
-                    <a href="{{ url('/') }}" target="_blank"
-                        class="block px-3 py-2 text-sm font-medium text-dim hover:text-white transition">
-                        {{ __('Lihat Portfolio') }} &nearr;
-                    </a>
                 </div>
 
-                <div class="pt-4 pb-1 border-t border-white/5 px-4">
+                <div class="pt-4 pb-1 border-t border-gray-200">
                     <div class="px-4">
-                        <div class="font-medium text-base text-bright">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-dim">{{ Auth::user()->email }}</div>
+                        <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                        <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                     </div>
 
                     <div class="mt-3 space-y-1">
@@ -158,7 +112,7 @@
         </nav>
 
         @isset($header)
-            <header class="bg-transparent border-b border-white/5">
+            <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
