@@ -16,7 +16,7 @@
 
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-bright leading-[1.2] md:leading-[1.1]">
-                DAFA'
+                DAFA' AHMAT SETYO NUGROHO
             </h1>
 
             <p class="text-base sm:text-lg text-dim leading-relaxed max-w-lg">
