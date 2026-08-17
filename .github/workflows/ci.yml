@@ -37,3 +37,16 @@ jobs:
 
       - name: Jalankan test
         run: php artisan test
+
+  deploy:
+    name: Deploy ke server
+    needs: test
+    runs-on: ubuntu-latest
+    # Hanya jalan kalau job "test" lolos, DAN ini push ke main
+    # (bukan pull_request, biar PR dari fork tidak bisa trigger deploy)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Panggil webhook aaPanel untuk pull kode terbaru
+        run: |
+          curl -fsSL "${{ secrets.DEPLOY_WEBHOOK_URL }}"
