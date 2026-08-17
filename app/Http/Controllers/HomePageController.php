@@ -17,7 +17,7 @@ class HomePageController extends Controller
             ->ordered()
             ->take(3)
             ->get();
-        saya errorkan belajar ci cd
+
         return view('pages.home', compact('featuredProjects'));
     }
 }
