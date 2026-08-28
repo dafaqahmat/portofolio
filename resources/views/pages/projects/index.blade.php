@@ -45,9 +45,9 @@
                                     @endforeach
                                 </div>
                             @endif
-                            <div class="flex items-center justify-between pt-2">
+                            <div class="flex items-center gap-2 pt-2">
                                 <a href="{{ localized_url('projects', null, $project->slug) }}"
-                                    class="group/btn relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#333335] border border-white/10 px-5 py-3 text-sm font-semibold text-bright transition-all duration-300 hover:bg-[#444446] hover:border-white/20 focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-[#0E0E11]">
+                                    class="group/btn relative inline-flex flex-1 items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#333335] border border-white/10 px-5 py-3 text-sm font-semibold text-bright transition-all duration-300 hover:bg-[#444446] hover:border-white/20 focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-[#0E0E11]">
                                     <span class="relative z-10">{{ __('Lihat Detail') }}</span>
                                     <svg class="relative z-10 h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -55,8 +55,12 @@
                                 </a>
                                 @if($project->link_demo)
                                     <a href="{{ $project->link_demo }}" target="_blank" rel="noopener noreferrer"
-                                        class="text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                                        {{ __('Demo') }} ↗
+                                        title="{{ __('Demo') }}"
+                                        class="group/demo relative inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-3 text-dim transition-all duration-300 hover:bg-white/10 hover:text-bright hover:border-white/20 focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-[#0E0E11]">
+                                        <svg class="h-5 w-5 transition-transform duration-300 group-hover/demo:-translate-y-0.5 group-hover/demo:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        <span class="sr-only">{{ __('Demo') }}</span>
                                     </a>
                                 @endif
                             </div>
