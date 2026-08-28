@@ -25,8 +25,11 @@
                 <div class="flex items-center gap-3">
                     @if($project->link_demo)
                         <a href="{{ $project->link_demo }}" target="_blank" rel="noopener noreferrer"
-                            class="px-4 py-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-sm font-medium hover:bg-emerald-500/30 transition-colors">
-                            {{ __('Lihat Demo') }} ↗
+                            class="group/demo inline-flex items-center gap-2 px-4 py-2 bg-[#333335] text-bright border border-white/10 rounded-lg text-sm font-medium hover:bg-[#444446] hover:border-white/20 transition-all duration-300">
+                            {{ __('Lihat Demo') }}
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover/demo:-translate-y-0.5 group-hover/demo:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
                         </a>
                     @endif
                     @if($project->link_repo)
@@ -85,13 +88,6 @@
                                 <span class="text-dim text-sm">{{ __('Kategori') }}</span>
                                 <span class="text-bright text-sm capitalize">{{ $project->category }}</span>
                             </div>
-                            @if($project->link_demo)
-                                <div class="flex items-center justify-between">
-                                    <span class="text-dim text-sm">{{ __('Demo') }}</span>
-                                    <a href="{{ $project->link_demo }}" target="_blank" rel="noopener noreferrer"
-                                        class="text-emerald-400 text-sm hover:underline">{{ __('Lihat') }} ↗</a>
-                                </div>
-                            @endif
                         </div>
                     </div>
                 </div>
