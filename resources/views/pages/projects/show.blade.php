@@ -25,11 +25,8 @@
                 <div class="flex items-center gap-3">
                     @if($project->link_demo)
                         <a href="{{ $project->link_demo }}" target="_blank" rel="noopener noreferrer"
-                            class="group/demo inline-flex items-center gap-2 px-4 py-2 bg-[#333335] text-bright border border-white/10 rounded-lg text-sm font-medium hover:bg-[#444446] hover:border-white/20 transition-all duration-300">
-                            {{ __('Lihat Demo') }}
-                            <svg class="w-4 h-4 transition-transform duration-300 group-hover/demo:-translate-y-0.5 group-hover/demo:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
+                            class="px-4 py-2 bg-white/5 text-bright border border-white/10 rounded-lg text-sm font-medium hover:bg-white/10 transition-colors">
+                            {{ __('Lihat Demo') }} ↗
                         </a>
                     @endif
                     @if($project->link_repo)
