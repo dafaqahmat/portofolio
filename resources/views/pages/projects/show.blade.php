@@ -26,13 +26,13 @@
                     @if($project->link_demo)
                         <a href="{{ $project->link_demo }}" target="_blank" rel="noopener noreferrer"
                             class="px-4 py-2 bg-white/5 text-bright border border-white/10 rounded-lg text-sm font-medium hover:bg-white/10 transition-colors">
-                            {{ __('Lihat Demo') }} ↗
+                            {{ __('Lihat Demo') }} ↗︎
                         </a>
                     @endif
                     @if($project->link_repo)
                         <a href="{{ $project->link_repo }}" target="_blank" rel="noopener noreferrer"
                             class="px-4 py-2 bg-white/5 text-bright border border-white/10 rounded-lg text-sm font-medium hover:bg-white/10 transition-colors">
-                            {{ __('Source Code') }} ↗
+                            {{ __('Source Code') }} ↗︎
                         </a>
                     @endif
                 </div>
