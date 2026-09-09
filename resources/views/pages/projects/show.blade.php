@@ -3,7 +3,13 @@
     $prefix = $locale === 'id' ? '' : $locale;
 @endphp
 
-<x-layouts.app :title="$project->title . ' - Project'" :description="Str::limit($project->description, 160)">
+@php
+    $ogImage = is_array($project->images) && count($project->images) > 0
+        ? 'storage/' . $project->images[0]
+        : null;
+@endphp
+
+<x-layouts.app :title="$project->title . ' - Project'" :description="Str::limit($project->description, 160)" :image="$ogImage">
 
     <section class="reveal space-y-10">
         <div class="space-y-4">

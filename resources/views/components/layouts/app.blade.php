@@ -1,4 +1,4 @@
-@props(['title' => null, 'description' => null])
+@props(['title' => null, 'description' => null, 'image' => null])
 
 @php
     $locale = app()->getLocale();
@@ -6,6 +6,7 @@
     
     $seoTitle = $title ?? __("Dafa' Ahmat Setyo Nugroho - Software Developer");
     $seoDescription = $description ?? __("Portofolio Dafa' Ahmat Setyo Nugroho. Lulusan Politeknik Negeri Malang, Software Developer, Backend Engineer, Laravel Developer.");
+    $seoImage = $image ? request()->root() . '/' . ltrim($image, '/') : request()->root() . '/foto-dafa.jpg';
     
     $locales = ['id' => '', 'en' => '/en', 'ar' => '/ar'];
     $baseUrl = config('app.url');
@@ -38,13 +39,15 @@
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:title" content="{{ $seoTitle }}">
     <meta property="og:description" content="{{ $seoDescription }}">
-    <meta property="og:image" content="{{ request()->root() . '/foto-dafa.jpg' }}">
+    <meta property="og:image" content="{{ $seoImage }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ request()->url() }}">
     <meta property="twitter:title" content="{{ $seoTitle }}">
     <meta property="twitter:description" content="{{ $seoDescription }}">
-    <meta property="twitter:image" content="{{ request()->root() . '/foto-dafa.jpg' }}">
+    <meta property="twitter:image" content="{{ $seoImage }}">
 
     <link rel="canonical" href="{{ request()->url() }}">
 
@@ -59,7 +62,7 @@
         "@@type": "Person",
         "name": "Dafa' Ahmat Setyo Nugroho",
         "url": "{{ $baseUrl }}",
-        "image": "{{ request()->root() . '/foto-dafa.jpg' }}",
+        "image": "{{ $seoImage }}",
         "jobTitle": "Software Developer",
         "description": "{{ $seoDescription }}",
         "email": "dafaqahmat57@gmail.com",
