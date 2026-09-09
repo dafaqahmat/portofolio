@@ -27,8 +27,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $seoTitle }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('foto-dafa.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('foto-dafa.png') }}">
+    <link rel="icon" type="image/jpeg" href="{{ asset('foto-dafa.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('foto-dafa.jpg') }}">
     <meta name="description" content="{{ $seoDescription }}">
     <meta name="keywords"
         content="Software Developer, Backend Engineer, Laravel Developer, Dafa Ahmat Setyo Nugroho, Dafa, Web Developer, Kediri">
@@ -38,13 +38,13 @@
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:title" content="{{ $seoTitle }}">
     <meta property="og:description" content="{{ $seoDescription }}">
-    <meta property="og:image" content="{{ asset('foto-dafa.png') }}">
+    <meta property="og:image" content="{{ request()->root() . '/foto-dafa.jpg' }}">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ request()->url() }}">
     <meta property="twitter:title" content="{{ $seoTitle }}">
     <meta property="twitter:description" content="{{ $seoDescription }}">
-    <meta property="twitter:image" content="{{ asset('foto-dafa.png') }}">
+    <meta property="twitter:image" content="{{ request()->root() . '/foto-dafa.jpg' }}">
 
     <link rel="canonical" href="{{ request()->url() }}">
 
@@ -59,7 +59,7 @@
         "@@type": "Person",
         "name": "Dafa' Ahmat Setyo Nugroho",
         "url": "{{ $baseUrl }}",
-        "image": "{{ asset('foto-dafa.png') }}",
+        "image": "{{ request()->root() . '/foto-dafa.jpg' }}",
         "jobTitle": "Software Developer",
         "description": "{{ $seoDescription }}",
         "email": "dafaqahmat57@gmail.com",
