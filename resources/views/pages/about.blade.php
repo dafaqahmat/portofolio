@@ -1,5 +1,9 @@
 <x-layouts.app :title="__('Tentang') . ' - Dafa\' Ahmat Setyo Nugroho'" :description="__('Tentang Dafa\' Ahmat Setyo Nugroho - Software Developer dari Kediri.')">
 
+    @php
+        $cvFile = app()->getLocale() === 'en' ? 'cv-dafa-en.pdf' : (app()->getLocale() === 'ar' ? 'cv-dafa-ar.pdf' : 'cv-dafa-id.pdf');
+    @endphp
+
     <section class="reveal space-y-10">
         <div class="space-y-3 max-w-xl">
             <h2 class="text-2xl md:text-3xl font-bold text-bright tracking-tight">{{ __('Tentang Saya') }}</h2>
@@ -13,6 +17,15 @@
                 <p class="text-dim leading-relaxed">
                     {{ __('Saya memiliki pengalaman dalam pengembangan web menggunakan Laravel, pengelolaan server Linux, dan konfigurasi DNS. Selain itu, saya juga tertarik dengan pengembangan mobile dan pemanfaatan tools AI untuk efisiensi kode.') }}
                 </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="{{ asset('cv/' . $cvFile) }}" target="_blank" rel="noopener"
+                        class="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors text-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-flex items-center gap-2">
+                        {{ __('Lihat CV') }}
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <div class="space-y-6">
